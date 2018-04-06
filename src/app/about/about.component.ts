@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';                            // add
 import { Observable } from 'rxjs/Observable';
 
-import { Increment, Decrement } from '@state/counter/counter.actions';  // add
-import { State } from '@state/counter/counter.state';                   // add
+import { Increment, Decrement, Load } from '@state/counter/counter.actions'; // change
+import { State } from '@state/counter/counter.state';
 
 @Component({
     selector: 'app-about',
@@ -27,6 +27,10 @@ export class AboutComponent implements OnInit {
     }                                                                   // add
 
     ngOnInit() {
+    }
+
+    load() {
+        this.store.dispatch(new Load());
     }
 
 }
