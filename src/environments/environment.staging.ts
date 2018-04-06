@@ -1,4 +1,4 @@
 export const environment = {
     name: 'staging',
-    production: false
+    production: true
   };
