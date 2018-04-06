@@ -10,7 +10,7 @@ import { environment } from '@env/environment';
 export class AppComponent {
   title = 'app';
 
-  constructor(){
+  constructor() {
     console.log('environment', environment);
   }
 }
