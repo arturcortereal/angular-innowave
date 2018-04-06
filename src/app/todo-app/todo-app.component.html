@@ -1,21 +1,14 @@
-<p>
-  todo-app works!
-</p>
+<!-- (...) -->
+<app-todo-adder></app-todo-adder>
+<app-todo-list></app-todo-list>                                                         <!-- add -->
 
-<form>
-  <input [(ngModel)]="newTodo" name="newTodo"/>
-  <button (click)="addTodo()" type="submit">Add Todo</button>
-</form>
+<!-- 
+    <ul>                                                                                // delete
+        <li *ngFor="let task of (todoList$ | async); let i = index">                    // delete
+            <input type="checkbox" [ngModel]="task.done" (click)="toggleTodo(i)"/>      // delete
+            {{task.name}}                                                               // delete
+        </li>                                                                           // delete
+    </ul>                                                                               // delete
+-->
 
-<ul>
-  <li *ngFor="let task of (todoList$ | async); let i = index">                
-      <input type="checkbox" [ngModel]="task.done" (click)="toggleTodo(i)"/>  
-      {{task.name}}
-  </li>
-</ul>
-
-<hr>
-
-<h3>Debug Stuff</h3>
-
-<pre>{{todoList$ | async | json}}</pre>                                         
+<!-- (...) -->
